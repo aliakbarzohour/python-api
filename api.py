@@ -14,5 +14,11 @@ for i in data:
     for j in i:
         # check data in the json file
         if j == input:
+            if j == 'address':
+                print(f"{i['address']['street']} {i['address']['suite']} {i['address']['city']} {i['address']['zipcode']}")
+                break
+            if j == 'company':
+                print(f"{i['company']['name']} {i['company']['catchPhrase']} {i['company']['bs']}")
+                break
             # print data
             print(' -- ',i[j])
